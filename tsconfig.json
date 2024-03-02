@@ -1,0 +1,39 @@
+{
+  "extends": "@react-native/typescript-config",
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react-native",
+    "allowJs": true,
+    "noEmit": true,
+    "noImplicitAny": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "typeRoots": ["node_modules/@types", "res", "types"],
+    "skipLibCheck": true,
+    "paths": {
+      "@defaultTypes": ["./src/types/defaultTypes"],
+      "@constants": ["./src/common/constants"],
+      "@commonStyles": ["./src/common/styles"],
+      "@commonComponents": ["./src/common/components"],
+      "@mainTheme": ["./src/common/theme"],
+      "@utils": ["./src/common/utils"],
+      "@store/*": ["./src/store/*"],
+      "@screens/*": ["./src/screens/*"],
+      "@main-icons": ["./src/common/icons"],
+      "@main-images": ["./src/common/images"],
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js"
+  ],
+  "include": [
+    "src/**/*",
+    "**/*.test.ts",
+    "**/*.test.tsx"
+  ]
+}
