@@ -1,0 +1,26 @@
+name: Test Project GitHub Actions by Kelek
+
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+
+on: [pull_request]
+
+env:
+  NODE_VERSION: 18
+
+jobs:
+  Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Starting Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install modules
+        run: yarn install
+
+      - name: Check Eslint
+        run: yarn lint
+
+      - name: Tests
+        run: yarn test
