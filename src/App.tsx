@@ -3,6 +3,7 @@ import { SafeAreaView, Text } from "react-native";
 import { FLEX_CENTER } from "@commonStyles";
 
 export const App = (): ReactElement => {
+  console.log("### test");
   return (
     <SafeAreaView
       style={{ flex: 1, ...FLEX_CENTER }}
